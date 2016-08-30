@@ -6,9 +6,7 @@
             <div id="welcome">
             {% for result in results %}
             <article class="post">
-                <h2>
-                        {{ result.name }}
-                </h2>
+                <h2>{{ result.country }} | {{ result.city }} | {{ result.street }} | {{ result.home }} </h2>
             </article>
             {% else %}
                 <div class="well">{{ 'result.results_not_found'|trans }}</div>

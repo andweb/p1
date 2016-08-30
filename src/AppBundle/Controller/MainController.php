@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\PostAddress;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,16 +14,7 @@ class MainController extends Controller
      */
     public function indexAction(Request $request)
     {
-    
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Country');
-    
-    
-    
-        //$results = $repository->findAll();
-        $results = $repository->findBy(
-            array('name' => "Рос?")
-        );
-        
+        $results = $this->getDoctrine()->getRepository(PostAddress::class)->findAll();       
 
         // replace this example code with whatever you need
         return $this->render('default/homepage.html.twig', array(

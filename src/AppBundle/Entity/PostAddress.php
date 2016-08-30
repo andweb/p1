@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
  * @ORM\Table(name="postaddress")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\PostAddressRepository")
  *
  * @author Andrey Khramov <andronweb@gmail.com>
  */
