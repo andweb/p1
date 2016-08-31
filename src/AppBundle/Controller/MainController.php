@@ -12,10 +12,10 @@ class MainController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
-    {
-        $results = $this->getDoctrine()->getRepository(PostAddress::class)->findAll();       
-
+    public function indexAction(Request $request)    // ()
+    {  
+        $results = $this->getDoctrine()->getRepository('AppBundle:PostAddress')->findLatest();
+        
         // replace this example code with whatever you need
         return $this->render('default/homepage.html.twig', array(
             'results' => $results,

@@ -20,7 +20,7 @@ class City
     private $id;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Country", inversedBy="city")
+     * @ORM\ManyToOne(targetEntity="Country", inversedBy="cities")
      * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
      */
     private $country;

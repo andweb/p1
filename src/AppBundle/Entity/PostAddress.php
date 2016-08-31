@@ -21,7 +21,7 @@ class PostAddress
     private $id;
        
     /**
-     * @ORM\ManyToOne(targetEntity="City", inversedBy="postaddress")
+     * @ORM\ManyToOne(targetEntity="City", inversedBy="postadresses")
      * @ORM\JoinColumn(name="city_id", referencedColumnName="id")
      */
     private $city;
