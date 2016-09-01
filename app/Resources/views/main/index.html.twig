@@ -1,0 +1,31 @@
+{% extends       'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="welcome">
+            
+            {{ dump(results) }}
+            
+            
+            {% for result in results %}
+            <article class="post">
+                <h2>{{ result.city.country.name }} | {{ result.city.name }} | {{ result.street }} | {{ result.home }} | {{ result.zipcode }} | {{ result.createdAt|date("d.m.Y H:i:s") }} </h2>
+            </article>
+            {% else %}
+                <div class="well">{{ 'result.results_not_found'|trans }}</div>
+            {% endfor %}
+            </div>
+
+            <div class="navigation text-center">
+                {{ pagerfanta(results, 'twitter_bootstrap3_translated', { routeName: 'blog_index_paginated' }) }}
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+</style>
+{% endblock %}

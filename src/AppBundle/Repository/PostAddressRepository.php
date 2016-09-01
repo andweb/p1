@@ -3,19 +3,18 @@
 namespace AppBundle\Repository;
 
 use AppBundle\Entity\PostAddress;
-
 use Doctrine\ORM\EntityRepository;
-
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 use Pagerfanta\Pagerfanta;
-
 
 /**
  * PostAddressRepository
  *
+ * @author Andrey Khramov <andronweb@gmail.com>
  */
 class PostAddressRepository extends EntityRepository
 {
+    const NUM_ITEMS = 1;
     /**
      * @return Query
      */
@@ -46,10 +45,15 @@ class PostAddressRepository extends EntityRepository
 
     }
     
-    public function findLatest($page = 2)
+    /**
+     * @param int $page
+     *
+     * @return Pagerfanta
+     */
+    public function findLatest($page = 1)
     {
         $paginator = new Pagerfanta(new DoctrineORMAdapter($this->findAll(), false));
-        $paginator->setMaxPerPage(3);
+        $paginator->setMaxPerPage(self::NUM_ITEMS);
         $paginator->setCurrentPage($page);
 
         return $paginator;

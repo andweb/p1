@@ -12,5 +12,6 @@ homepage:
     requirements:
         _locale: '%app_locales%'
     defaults:
-        _controller: AppBundle:Main:index
+        _controller: FrameworkBundle:Template:template
+        template:    default/homepage.html.twig
         _locale:     '%locale%'
