@@ -6,6 +6,30 @@
                 <source>result.results_not_found</source>
                 <target>Results noy found.</target>
             </trans-unit>
+            <trans-unit id="table_caption.country">
+                <source>table_caption.country</source>
+                <target>Country</target>
+            </trans-unit>
+            <trans-unit id="table_caption.city">
+                <source>table_caption.city</source>
+                <target>City</target>
+            </trans-unit>
+            <trans-unit id="table_caption.street">
+                <source>table_caption.street</source>
+                <target>Street</target>
+            </trans-unit>
+            <trans-unit id="table_caption.home">
+                <source>table_caption.home</source>
+                <target>Home</target>
+            </trans-unit>
+            <trans-unit id="table_caption.zipcode">
+                <source>table_caption.zipcode</source>
+                <target>Zipcode</target>
+            </trans-unit>
+            <trans-unit id="table_caption.date">
+                <source>table_caption.date</source>
+                <target>Date</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
